@@ -31,3 +31,4 @@ for i in range(t):
         print(cost1)
     else:
         print(min(cost1,cost2))
+    #testing
