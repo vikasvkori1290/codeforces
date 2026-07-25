@@ -20,3 +20,4 @@ for i in range(t):
         print("NO")
     else:
         print("YES")    
+
