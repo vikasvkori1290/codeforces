@@ -29,4 +29,3 @@ for _ in range(t):
             break
     print(min(totalhours,totalhrs))
         
-
