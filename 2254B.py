@@ -1,19 +1,24 @@
-t=int(input())
-for i in range(t):
-    n=int(input())
-    s=str(input())
-    l=1
-    r=2
-    minimalcount=2
-    while r<n:
-        
-        if s[l]==s[r]:
-            r+=1
-        else:
-            minimalcount+=1
-            l=r
-            r+=1
-    if len(s)==3:
-        print(2)
-    else:
-        print(minimalcount)
+t = int(input())
+
+for _ in range(t):
+    n = int(input())
+    s = input()
+
+    current = 1
+
+    for i in range(1, n):
+        if s[i] != s[i - 1]:
+            current += 1
+
+    ans = current
+
+    for i in range(1, n - 1):
+        a = s[i - 1]
+        b = s[i]
+        c = s[i + 1]
+
+        new_length = current - (a != b) - (b != c) + (a != c)
+
+        ans = min(ans, new_length)
+
+    print(ans)
